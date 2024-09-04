@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<header class="header">
+    <div class="logo">MySocial</div>
+    <input type="text" placeholder="Search..." class="search-bar">
+    <nav class="navigation">
+        <a href="#" class="nav-link">>Home</a>
+        <a href="#" class="nav-link">Friends</a>
+        <a href="#" class="nav-link">Notifications</a>
+        <a href="#" class="nav-link">Messages</a>
+        <a href="#" class="nav-link home-link">Profile</a>
+    </nav>
+</header>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="profile-wrapper">
+        <div class="profile-card">
+            <div class="profile-banner">
+                <img src="https://via.placeholder.com/400x150" alt="Banner Image">
+            </div>
+            <div class="profile-content">
+                <div class="profile-picture">
+                    <img src="https://via.placeholder.com/100" alt="Profile Picture">
+                </div>
+                <h1 class="name">ziko l3azi</h1>
+                <p class="title">ahsan 3azi</p>
+                <div class="profile-details">
+                    <div class="info-item">
+                        <strong>Username:</strong>
+                        <span>ziko</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Gender:</strong>
+                        <span>Male</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Email:</strong>
+                        <span>zakariahafdane2005@gmail.com</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Date of Birth:</strong>
+                        <span>2005-08-16</span>
+                    </div>
+                </div>
+                <div class="post-section">
+                    <a href="#" class="button" id="show-post-button">Show Post</a>
+                    <p id="post-content" class="hidden">si lghlimi kantalbo b xwiya dyal privacy matb9ax tol lina 3la lmohadatat dylna</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("show-post-button").addEventListener("click", function(event) {
+            event.preventDefault();
+            var postContent = document.getElementById("post-content");
+            if (postContent.classList.contains("hidden")) {
+                postContent.classList.remove("hidden");
+                this.textContent = "Hide Post";
+            } else {
+                postContent.classList.add("hidden");
+                this.textContent = "Show Post";
+            }
+        });
+    </script>
+</body>
+</html>

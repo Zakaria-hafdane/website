@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home - MySocial</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">MySocial</div>
+        <input type="text" placeholder="Search..." class="search-bar">
+        <nav class="navigation">
+            <a href="#" class="nav-link home-link">home</a>
+            <a href="#" class="nav-link">Friends</a>
+            <a href="#" class="nav-link">Notifications</a>
+            <a href="#" class="nav-link">Messages</a>
+            <a href="#" class="nav-link">Profile</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <div class="create-post">
+                <textarea id="postText" placeholder="What's on your mind?"></textarea>
+                <div class="post-options">
+                    <button>Photo/Video</button>
+                </div>
+                <button id="postButton" class="post-button" style="display:none;">Post</button>
+            </div>
+
+            <div class="feed">
+                <!-- Example Post -->
+                <div class="post">
+                    <div class="post-header">
+                        <img src="user1.jpg" alt="User" class="user-avatar">
+                        <div class="post-user-info">
+                            <span class="username">ziko</span>
+                            <span class="timestamp">2 hours ago</span>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <p>ziko ahsan 3azi.</p>
+                    </div>
+                    <div class="post-engagement">
+                        <button>Like</button>
+                        <button>Comment</button>
+                        <button>Share</button>
+                    </div>
+                </div>
+                <!-- Add more posts here -->
+            </div>
+        </main>
+    </div>
+
+ 
+
+    <!-- JavaScript -->
+    <script>
+        const postText = document.getElementById('postText');
+        const postButton = document.getElementById('postButton');
+
+        postText.addEventListener('input', function() {
+            if (postText.value.trim() !== '') {
+                postButton.style.display = 'block';
+            } else {
+                postButton.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
